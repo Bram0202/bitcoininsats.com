@@ -1,0 +1,31 @@
+/* Footer text. */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;   /* Height of the footer */
+  background-color: #FF9900;
+}
+
+/* Tablet footer. */
+@media only screen and (max-width : 951px){
+  #footer {
+    height: 80px;   /* Height of the footer */
+  }
+}
+
+/* Mobile footer. */
+@media only screen and (max-width : 450px){
+  #footer {
+    height: 240px;
+  }
+}
+
+#footer a:hover {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+.my-bg {
+  padding-top: 15px;
+}

@@ -1,0 +1,61 @@
+html,body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:#fefefe;
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom: 60px;   /* Height of the footer */
+}
+
+/* Tablet footer. */
+@media only screen and (max-width : 951px){
+  #body {
+    padding-bottom: 80px;   /* Height of the footer */
+  }
+}
+
+/* Mobile footer. */
+@media only screen and (max-width : 450px){
+  #body {
+    padding-bottom: 240px;
+  }
+}
+
+/* Font styling. */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.my-col h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.my-col p {
+  font-size: 1em;
+}
+
+.my-col p {
+  padding-bottom: 1vh;
+}
+
+.time-updated {
+  font-size: 0.7em;
+}
+
+.orange {
+  color: #FF9900;
+}

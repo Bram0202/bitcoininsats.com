@@ -1,0 +1,21 @@
+ul li {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.my-col a {
+  font-weight: bold;
+}
