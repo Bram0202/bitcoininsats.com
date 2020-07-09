@@ -79,63 +79,60 @@
             <div class="col-md-3 offset-md-1 my-col">
 
               <!-- Bitcoin vs satoshi -->
-              <h2>Bitcoin 🗺️</h2>
-              <p>₿1 = 100,000,000 satoshi's</p>
+              <h2>Bitcoin 🌍️</h2>
+              <p>₿1 = 100,000,000 sats</p>
 
               <!-- euro vs. satoshi -->
               <h2>Euro 🇪🇺</h2>
-              <p>€1 = <?php echo $eurSatoshi; ?> satoshi's</p>
+              <p>€1 = <?php echo $eurSatoshi; ?> sats</p>
 
               <!-- dollar vs. satoshi -->
               <h2>U.S. Dollar 🇺🇸</h2>
-              <p>$1 = <?php echo $usdSatoshi; ?> satoshi's</p>
+              <p>$1 = <?php echo $usdSatoshi; ?> sats</p>
 
               <!-- Britse pond vs. satoshi -->
               <h2>British Pound 🇬🇧</h2>
-              <p>£1 = <?php echo $gbpSatoshi; ?> satoshi's</p>
-
-              <!-- Japanse Yen vs. satoshi -->
-              <h2>Japanese Yen 🇯🇵</h2>
-              <p>¥1 = <?php echo $jpySatoshi; ?> satoshi's</p>
-
-            </div> <!-- Einde col -->
-
-
-            <!-- Middelste colomn met content. -->
-            <div class="col-md-3 offset-md-1 my-col">
-              <!-- Chinese Yuan vs. satoshi -->
-              <h2>Chinese Yuan 🇨🇳</h2>
-              <p>¥1 = <?php echo $cnySatoshi; ?> satoshi's</p>
-
-              <!-- Zwitserse Frank vs. satoshi -->
-              <h2>Swiss Franc 🇨🇭</h2>
-              <p>₣1 = <?php echo $chfSatoshi; ?> satoshi's</p>
-
-              <!-- Australische Dollar vs. satoshi -->
-              <h2>Australian Dollar 🇦🇺</h2>
-              <p>$1 = <?php echo $audSatoshi; ?> satoshi's</p>
-
-              <!-- Russische Roebel vs. satoshi -->
-              <h2>Russian Ruble 🇷🇺</h2>
-              <p>₽1 = <?php echo $rubSatoshi; ?> satoshi's</p>
+              <p>£1 = <?php echo $gbpSatoshi; ?> sats</p>
 
               <!-- Canadese Dollar vs. satoshi -->
               <h2>Canadian Dollar 🇨🇦</h2>
-              <p>$1 = <?php echo $cadSatoshi; ?> satoshi's</p>
+              <p>$1 = <?php echo $cadSatoshi; ?> sats</p>
+            </div> <!-- Einde col -->
 
+            <!-- Middelste colomn met content. -->
+            <div class="col-md-3 offset-md-1 my-col">
+
+              <!-- Japanse Yen vs. satoshi -->
+              <h2>Japanese Yen 🇯🇵</h2>
+              <p>¥1 = <?php echo $jpySatoshi; ?> sats</p>
+
+              <!-- Chinese Yuan vs. satoshi -->
+              <h2>Chinese Yuan 🇨🇳</h2>
+              <p>¥1 = <?php echo $cnySatoshi; ?> sats</p>
+
+              <!-- Zwitserse Frank vs. satoshi -->
+              <h2>Swiss Franc 🇨🇭</h2>
+              <p>₣1 = <?php echo $chfSatoshi; ?> sats</p>
+
+              <!-- Australische Dollar vs. satoshi -->
+              <h2>Australian Dollar 🇦🇺</h2>
+              <p>$1 = <?php echo $audSatoshi; ?> sats</p>
+
+              <!-- Russische Roebel vs. satoshi -->
+              <h2>Russian Ruble 🇷🇺</h2>
+              <p>₽1 = <?php echo $rubSatoshi; ?> sats</p>
             </div> <!-- Einde col. -->
-
 
             <!-- Rechter colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
 
               <!-- Deense Kroon vs. satoshi -->
               <h2>Danish Krone 🇩🇰</h2>
-              <p>kr1 = <?php echo $dkkSatoshi; ?> satoshi's</p>
+              <p>kr1 = <?php echo $dkkSatoshi; ?> sats</p>
 
               <!-- Noorse Kroon vs. satoshi -->
               <h2>Norwegian Krone 🇳🇴</h2>
-              <p>kr1 = <?php echo $nokSatoshi; ?> satoshi's</p>
+              <p>kr1 = <?php echo $nokSatoshi; ?> sats</p>
 
               <!-- Zweedse Kroon vs. satoshi -->
               <h2>Swedish Krona 🇸🇪</h2>
@@ -143,11 +140,11 @@
 
               <!-- Turkse Lira vs. satoshi -->
               <h2>Turkish Lira 🇹🇷</h2>
-              <p>₺1 = <?php echo $trySatoshi; ?> satoshi's</p>
+              <p>₺1 = <?php echo $trySatoshi; ?> sats</p>
 
               <!-- Venezuelaanse Bolivar vs. satoshi -->
               <h2>Venezuelan Bolívar 🇻🇪</h2>
-              <p>Bs1 = <?php echo $vefSatoshi; ?> satoshi</p>
+              <p>Bs1 = <?php echo $vefSatoshi; ?> sats</p>
 
             </div> <!-- Einde col. -->
           </div> <!-- Einde row. -->

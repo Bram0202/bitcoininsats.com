@@ -12,7 +12,7 @@
      <nav class="navbar navbar-expand-md navbar-light">
 
       <!-- Logo. -->
-      <a class="my-logo" href="index" class="navbar-brand">The <span class="orange">Bitcoin</span> price in satoshi's</a>
+      <a class="my-logo" href="index" class="navbar-brand">The <span class="orange">Bitcoin</span> price in sats</a>
 
       <!-- Hamburger-menu. -->
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
