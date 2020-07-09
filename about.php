@@ -28,16 +28,12 @@
   <body>
     <div id="container">
       <div id="header">
-        <!-- Header content. -->
         <?php require "includes/header.php"; ?>
-        <!-- Einde header content. -->
       </div>
 
       <div id="body">
-        <!-- Main content. -->
         <div class="container my-container">
           <div class="row my-row">
-            <!-- Colomn met content. -->
             <div class="col-md-6 offset-md-3 my-col">
 
               <h1>About Satoshi's Price</h1>
@@ -73,7 +69,7 @@
               </p>
               </br>
 
-            </div> <!-- Einde col -->
+            </div>
           </div>
         </div>
       </div>
