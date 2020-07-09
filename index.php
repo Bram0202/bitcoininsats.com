@@ -27,7 +27,7 @@
   <body>
     <?php
       /*
-      De wiskunde die gedaan moet worden om de data van Coindesk om te rekenen naar het aantal satoshi.
+      The math behind the convertion of the Coindesk data.
       1 bitcoin = $3500
       1 satoshi = (3500/100.000.000)
       $1 = 1/000035
@@ -35,131 +35,107 @@
 
       // Function die de prijs van 1BTC omrekent naar de hoeveelheid satoshi die 1€/$/£ etc. waard is.
       function priceInSatoshi($price) {
-        $tinyPrice = $price / 100000000;
-        $satoshiPrice = 1 / $tinyPrice;
+        $tempPrice = $price / 100000000;
+        $priceInSats = 1 / $tempPrice;
 
-        if (round((double) $satoshiPrice) > 0) {
-          return round((double) $satoshiPrice);
-        } elseif (round((double) $satoshiPrice) <= 0) {
-          return round((double) $satoshiPrice, 4);
+        if (round((double) $priceInSats) > 0) {
+          return round((double) $priceInSats);
+        } elseif (round((double) $priceInSats) <= 0) {
+          return round((double) $priceInSats, 4);
         }
       }
 
       // Reken de verschillende currencies om naar het aantal satoshi.
-      $eurSatoshi = priceInSatoshi($eurPrice);
-      $usdSatoshi = priceInSatoshi($usdPrice);
-      $gbpSatoshi = priceInSatoshi($gbpPrice);
-      $jpySatoshi = priceInSatoshi($jpyPrice);
-      $cnySatoshi = priceInSatoshi($cnyPrice);
-      $chfSatoshi = priceInSatoshi($chfPrice);
-      $audSatoshi = priceInSatoshi($audPrice);
-      $rubSatoshi = priceInSatoshi($rubPrice);
-      $cadSatoshi = priceInSatoshi($cadPrice);
-      $dkkSatoshi = priceInSatoshi($dkkPrice);
-      $nokSatoshi = priceInSatoshi($nokPrice);
-      $sekSatoshi = priceInSatoshi($sekPrice);
-      $trySatoshi = priceInSatoshi($tryPrice);
-      $vefSatoshi = priceInSatoshi($vefPrice);
-
+      $eurPriceInSats = priceInSatoshi($eurPrice);
+      $usdPriceInSats = priceInSatoshi($usdPrice);
+      $gbpPriceInSats = priceInSatoshi($gbpPrice);
+      $jpyPriceInSats = priceInSatoshi($jpyPrice);
+      $cnyPriceInSats = priceInSatoshi($cnyPrice);
+      $chfPriceInSats = priceInSatoshi($chfPrice);
+      $audPriceInSats = priceInSatoshi($audPrice);
+      $rubPriceInSats = priceInSatoshi($rubPrice);
+      $cadPriceInSats = priceInSatoshi($cadPrice);
+      $dkkPriceInSats = priceInSatoshi($dkkPrice);
+      $nokPriceInSats = priceInSatoshi($nokPrice);
+      $sekPriceInSats = priceInSatoshi($sekPrice);
+      $tryPriceInSats = priceInSatoshi($tryPrice);
+      $vefPriceInSats = priceInSatoshi($vefPrice);
     ?>
 
     <div id="container">
       <div id="header">
-        <!-- Header content. -->
         <?php require "includes/header.php"; ?>
-        <!-- Einde header content. -->
       </div>
 
       <div id="body">
-        <!-- Main content. -->
         <div class="container my-container">
           <div class="row my-row">
 
             <!-- Linker colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
 
-              <!-- Bitcoin vs satoshi -->
-              <h2>Bitcoin 🌍️</h2>
+              <h2>Bitcoin <img src="./images/bitcoin_logo.png" height="25px"></h2>
               <p>₿1 = 100,000,000 sats</p>
 
-              <!-- euro vs. satoshi -->
               <h2>Euro 🇪🇺</h2>
-              <p>€1 = <?php echo $eurSatoshi; ?> sats</p>
+              <p>€1 = <?php echo $eurPriceInSats; ?> sats</p>
 
-              <!-- dollar vs. satoshi -->
               <h2>U.S. Dollar 🇺🇸</h2>
-              <p>$1 = <?php echo $usdSatoshi; ?> sats</p>
+              <p>$1 = <?php echo $usdPriceInSats; ?> sats</p>
 
-              <!-- Britse pond vs. satoshi -->
               <h2>British Pound 🇬🇧</h2>
-              <p>£1 = <?php echo $gbpSatoshi; ?> sats</p>
+              <p>£1 = <?php echo $gbpPriceInSats; ?> sats</p>
 
-              <!-- Canadese Dollar vs. satoshi -->
               <h2>Canadian Dollar 🇨🇦</h2>
-              <p>$1 = <?php echo $cadSatoshi; ?> sats</p>
-            </div> <!-- Einde col -->
+              <p>$1 = <?php echo $cadPriceInSats; ?> sats</p>
+            </div>
 
             <!-- Middelste colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
-
-              <!-- Japanse Yen vs. satoshi -->
               <h2>Japanese Yen 🇯🇵</h2>
-              <p>¥1 = <?php echo $jpySatoshi; ?> sats</p>
+              <p>¥1 = <?php echo $jpyPriceInSats; ?> sats</p>
 
-              <!-- Chinese Yuan vs. satoshi -->
               <h2>Chinese Yuan 🇨🇳</h2>
-              <p>¥1 = <?php echo $cnySatoshi; ?> sats</p>
+              <p>¥1 = <?php echo $cnyPriceInSats; ?> sats</p>
 
-              <!-- Zwitserse Frank vs. satoshi -->
               <h2>Swiss Franc 🇨🇭</h2>
-              <p>₣1 = <?php echo $chfSatoshi; ?> sats</p>
+              <p>₣1 = <?php echo $chfPriceInSats; ?> sats</p>
 
-              <!-- Australische Dollar vs. satoshi -->
               <h2>Australian Dollar 🇦🇺</h2>
-              <p>$1 = <?php echo $audSatoshi; ?> sats</p>
+              <p>$1 = <?php echo $audPriceInSats; ?> sats</p>
 
-              <!-- Russische Roebel vs. satoshi -->
               <h2>Russian Ruble 🇷🇺</h2>
-              <p>₽1 = <?php echo $rubSatoshi; ?> sats</p>
-            </div> <!-- Einde col. -->
+              <p>₽1 = <?php echo $rubPriceInSats; ?> sats</p>
+            </div>
 
             <!-- Rechter colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
 
-              <!-- Deense Kroon vs. satoshi -->
               <h2>Danish Krone 🇩🇰</h2>
-              <p>kr1 = <?php echo $dkkSatoshi; ?> sats</p>
+              <p>kr1 = <?php echo $dkkPriceInSats; ?> sats</p>
 
-              <!-- Noorse Kroon vs. satoshi -->
               <h2>Norwegian Krone 🇳🇴</h2>
-              <p>kr1 = <?php echo $nokSatoshi; ?> sats</p>
+              <p>kr1 = <?php echo $nokPriceInSats; ?> sats</p>
 
-              <!-- Zweedse Kroon vs. satoshi -->
               <h2>Swedish Krona 🇸🇪</h2>
-              <p>kr1 = <?php echo $sekSatoshi; ?> satoshi's</p>
+              <p>kr1 = <?php echo $sekPriceInSats; ?> satoshi's</p>
 
-              <!-- Turkse Lira vs. satoshi -->
               <h2>Turkish Lira 🇹🇷</h2>
-              <p>₺1 = <?php echo $trySatoshi; ?> sats</p>
+              <p>₺1 = <?php echo $tryPriceInSats; ?> sats</p>
 
-              <!-- Venezuelaanse Bolivar vs. satoshi -->
               <h2>Venezuelan Bolívar 🇻🇪</h2>
-              <p>Bs1 = <?php echo $vefSatoshi; ?> sats</p>
-
-            </div> <!-- Einde col. -->
-          </div> <!-- Einde row. -->
+              <p>Bs1 = <?php echo $vefPriceInSats; ?> sats</p>
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-md-4 offset-md-1">
-              <!-- Laatse keer dat de prijzen zijn ge-updated. -->
-              <!-- MMM DD, YYYY HH:MM:SS UTC -->
               <div class="time-updated">
-                <p>Last updated: <?php echo $lastUpdated; ?></p>
+                <p>Last updated: <?php echo $lastUpdated; ?></p> <!-- MMM DD, YYYY HH:MM:SS UTC -->
               </div>
-            </div> <!-- Einde col. -->
-          </div> <!-- Einde row. -->
-        </div> <!-- Einde container. -->
-        <!-- Einde main content. -->
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="footer">
