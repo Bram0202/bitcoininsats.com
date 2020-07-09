@@ -28,9 +28,9 @@
     <?php
       /*
       De wiskunde die gedaan moet worden om de data van Coindesk om te rekenen naar het aantal satoshi.
-      1 btc = $3500
+      1 bitcoin = $3500
       1 satoshi = (3500/100.000.000)
-      1/.000035 is het aantal satoshi dat $1 waard is!
+      $1 = 1/0.000035
       */
 
       // Function die de prijs van 1BTC omrekent naar de hoeveelheid satoshi die 1€/$/£ etc. waard is.
