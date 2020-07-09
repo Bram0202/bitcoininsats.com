@@ -118,7 +118,7 @@
               <p>kr1 = <?php echo $nokPriceInSats; ?> sats</p>
 
               <h2>Swedish Krona 🇸🇪</h2>
-              <p>kr1 = <?php echo $sekPriceInSats; ?> satoshi's</p>
+              <p>kr1 = <?php echo $sekPriceInSats; ?> sats</p>
 
               <h2>Turkish Lira 🇹🇷</h2>
               <p>₺1 = <?php echo $tryPriceInSats; ?> sats</p>
