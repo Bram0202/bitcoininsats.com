@@ -127,7 +127,7 @@
               <p>₺1 = <?php echo $tryPriceInSats; ?> sats</p>
 
               <h2>Iranian Rial 🇮🇷</h2>
-              <p>Bs1 = <?php echo $irrPriceInSats; ?> sats</p>
+              <p>﷼1 = <?php echo $irrPriceInSats; ?> sats</p>
 
               <h2>Venezuelan Bolívar 🇻🇪</h2>
               <p>Bs1 = <?php echo $vefPriceInSats; ?> sats</p>
