@@ -87,7 +87,7 @@
               <p>₺1 = <?php echo priceInSatoshi(getPrice("TRY")); ?> sats</p>
 
               <h2>Iranian Rial 🇮🇷</h2>
-              <p>﷼1 = <?php echo priceInSatoshi(getPrice("IRR")); ?> sats</p>
+              <p> <?php echo priceInSatoshi(getPrice("IRR")); ?> sats = ﷼1</p>
 
               <h2>Venezuelan Bolívar 🇻🇪</h2>
               <p>Bs1 = <?php echo priceInSatoshi(getPrice("VEF")); ?> sats</p>
