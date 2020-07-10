@@ -15,10 +15,10 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Satoshi's Price shows the Bitcoin price in satoshi's, because it is easier to read and to count." />
-    <meta name="twitter:title" content="Satoshi's Price" />
-    <meta name="twitter:site" content="@brambakx" />
-    <title>Satoshi's Price</title>
+    <meta name="twitter:description" content="The best site for the bitcoin price vs. fiat, gold and silver. In sats." />
+    <meta name="twitter:title" content="Bitcoin in sats" />
+    <meta name="twitter:creator" content="@bram21_" />
+    <title>Bitcoin in sats</title>
   </head>
   <body>
     <div id="container">
@@ -27,6 +27,7 @@
       </div>
 
       <div id="body">
+
         <div class="container my-container">
           <div class="row my-row">
 
@@ -83,7 +84,7 @@
               <p>₺1 = <?php echo getPrice("TRY"); ?> sats</p>
 
               <h2>Iranian Rial 🇮🇷</h2>
-              <p> <?php echo getPrice("IRR"); ?> sats = ﷼1</p>
+              <p>1IRR = <?php echo getPrice("IRR"); ?> sats</p>
 
               <h2>Venezuelan Bolívar 🇻🇪</h2>
               <p>Bs1 = <?php echo getPrice("VEF"); ?> sats</p>
