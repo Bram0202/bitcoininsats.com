@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon16x16.png"> <!--  https://emojipedia.org/circled-ideograph-accept/ -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x190" href="images/favicon180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x190" href="images/apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -19,55 +19,19 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Satoshi's Price shows the Bitcoin price in satoshi's, because it is easier to read and to count." />
-    <meta name="twitter:title" content="Satoshi's Price" />
-    <meta name="twitter:site" content="@brambakx" />
-    <title>Satoshi's Price</title>
+    <meta name="twitter:description" content="The best site for the bitcoin price vs. fiat, gold and silver. In sats." />
+    <meta name="twitter:title" content="Bitcoin in sats" />
+    <meta name="twitter:creator" content="@bram21_" />
+    <title>Bitcoin in sats</title>
   </head>
   <body>
-    <?php
-      /*
-      The math behind the convertion of the Coindesk data.
-      1 bitcoin = $3500
-      1 satoshi = (3500/100.000.000)
-      $1 = 1/000035
-      */
-
-      // Function die de prijs van 1BTC omrekent naar de hoeveelheid satoshi die 1€/$/£ etc. waard is.
-      function priceInSatoshi($price) {
-        $tempPrice = $price / 100000000;
-        $priceInSats = 1 / $tempPrice;
-
-        if (round((double) $priceInSats) > 0) {
-          return round((double) $priceInSats);
-        } elseif (round((double) $priceInSats) <= 0) {
-          return round((double) $priceInSats, 4);
-        }
-      }
-
-      // Reken de verschillende currencies om naar het aantal satoshi.
-      $eurPriceInSats = priceInSatoshi($eurPrice);
-      $usdPriceInSats = priceInSatoshi($usdPrice);
-      $gbpPriceInSats = priceInSatoshi($gbpPrice);
-      $jpyPriceInSats = priceInSatoshi($jpyPrice);
-      $cnyPriceInSats = priceInSatoshi($cnyPrice);
-      $chfPriceInSats = priceInSatoshi($chfPrice);
-      $audPriceInSats = priceInSatoshi($audPrice);
-      $rubPriceInSats = priceInSatoshi($rubPrice);
-      $cadPriceInSats = priceInSatoshi($cadPrice);
-      $dkkPriceInSats = priceInSatoshi($dkkPrice);
-      $nokPriceInSats = priceInSatoshi($nokPrice);
-      $sekPriceInSats = priceInSatoshi($sekPrice);
-      $tryPriceInSats = priceInSatoshi($tryPrice);
-      $vefPriceInSats = priceInSatoshi($vefPrice);
-    ?>
-
     <div id="container">
       <div id="header">
         <?php require "includes/header.php"; ?>
       </div>
 
       <div id="body">
+
         <div class="container my-container">
           <div class="row my-row">
 
@@ -75,56 +39,65 @@
             <div class="col-md-3 offset-md-1 my-col">
 
               <h2>Bitcoin <img src="./images/bitcoin_logo.png" height="25px"></h2>
-              <p>₿1 = 100,000,000 sats</p>
+              <p>₿1 = <?php echo getPrice("BTC"); ?> sats</p>
 
               <h2>Euro 🇪🇺</h2>
-              <p>€1 = <?php echo $eurPriceInSats; ?> sats</p>
+              <p>€1 = <?php echo getPrice("EUR"); ?> sats</p>
 
               <h2>U.S. Dollar 🇺🇸</h2>
-              <p>$1 = <?php echo $usdPriceInSats; ?> sats</p>
+              <p>$1 = <?php echo getPrice("USD"); ?> sats</p>
 
               <h2>British Pound 🇬🇧</h2>
-              <p>£1 = <?php echo $gbpPriceInSats; ?> sats</p>
+              <p>£1 = <?php echo getPrice("GBP"); ?> sats</p>
 
               <h2>Canadian Dollar 🇨🇦</h2>
-              <p>$1 = <?php echo $cadPriceInSats; ?> sats</p>
+              <p>$1 = <?php echo getPrice("CAD"); ?> sats</p>
+
+              <h2>Australian Dollar 🇦🇺</h2>
+              <p>$1 = <?php echo getPrice("AUD"); ?> sats</p>
             </div>
 
             <!-- Middelste colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
               <h2>Japanese Yen 🇯🇵</h2>
-              <p>¥1 = <?php echo $jpyPriceInSats; ?> sats</p>
+              <p>¥1 = <?php echo getPrice("JPY"); ?> sats</p>
 
               <h2>Chinese Yuan 🇨🇳</h2>
-              <p>¥1 = <?php echo $cnyPriceInSats; ?> sats</p>
+              <p>¥1 = <?php echo getPrice("CNY"); ?> sats</p>
 
               <h2>Swiss Franc 🇨🇭</h2>
-              <p>₣1 = <?php echo $chfPriceInSats; ?> sats</p>
+              <p>₣1 = <?php echo getPrice("CHF"); ?> sats</p>
 
-              <h2>Australian Dollar 🇦🇺</h2>
-              <p>$1 = <?php echo $audPriceInSats; ?> sats</p>
+              <h2>Danish Krone 🇩🇰</h2>
+              <p>kr1 = <?php echo getPrice("DKK"); ?> sats</p>
 
-              <h2>Russian Ruble 🇷🇺</h2>
-              <p>₽1 = <?php echo $rubPriceInSats; ?> sats</p>
+              <h2>Norwegian Krone 🇳🇴</h2>
+              <p>kr1 = <?php echo getPrice("NOK"); ?> sats</p>
+
+              <h2>Swedish Krona 🇸🇪</h2>
+              <p>kr1 = <?php echo getPrice("SEK"); ?> sats</p>
             </div>
 
             <!-- Rechter colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
 
-              <h2>Danish Krone 🇩🇰</h2>
-              <p>kr1 = <?php echo $dkkPriceInSats; ?> sats</p>
-
-              <h2>Norwegian Krone 🇳🇴</h2>
-              <p>kr1 = <?php echo $nokPriceInSats; ?> sats</p>
-
-              <h2>Swedish Krona 🇸🇪</h2>
-              <p>kr1 = <?php echo $sekPriceInSats; ?> satoshi's</p>
+              <h2>Russian Ruble 🇷🇺</h2>
+              <p>₽1 = <?php echo getPrice("RUB"); ?> sats</p>
 
               <h2>Turkish Lira 🇹🇷</h2>
-              <p>₺1 = <?php echo $tryPriceInSats; ?> sats</p>
+              <p>₺1 = <?php echo getPrice("TRY"); ?> sats</p>
+
+              <h2>Iranian Rial 🇮🇷</h2>
+              <p>1IRR = <?php echo getPrice("IRR"); ?> sats</p>
 
               <h2>Venezuelan Bolívar 🇻🇪</h2>
-              <p>Bs1 = <?php echo $vefPriceInSats; ?> sats</p>
+              <p>Bs1 = <?php echo getPrice("VEF"); ?> sats</p>
+
+              <h2>Gold (XAU) ⛏️</h2>
+              <p>1 t/oz = <?php echo getPrice("XAU"); ?> sats</p>
+
+              <h2>Silver (XAG) ⛏️</h2>
+              <p>1 t/oz = <?php echo getPrice("XAG"); ?> sats</p>
             </div>
           </div>
 
@@ -132,6 +105,11 @@
             <div class="col-md-4 offset-md-1">
               <div class="time-updated">
                 <p>Last updated: <?php echo $lastUpdated; ?></p> <!-- MMM DD, YYYY HH:MM:SS UTC -->
+              </div>
+            </div>
+            <div class="col-md-3 offset-md-4">
+              <div class="time-updated">
+                <p>Note that gold/silver markets have a premium when closed!</p>
               </div>
             </div>
           </div>

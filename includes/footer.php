@@ -7,12 +7,12 @@
   <div class="row">
     <div class="col-md-3 offset-md-1 my-bg">
       <!-- Twitter link. -->
-      <p>Created by: <a href="https://twitter.com/brambakx" target="_blank">Bram Bakx</a></p>
+      <p>Created by: <a href="https://twitter.com/bram21_" target="_blank">Bram</a></p>
     </div>
 
     <div class="col-md-3 my-bg">
       <!-- Coindesk link. -->
-      <p>Powered by: <a href="https://www.coindesk.com/price/bitcoin" target="_blank">CoinDesk</a></p>
+      <p>Data by: <a href="https://www.coindesk.com/price/bitcoin" target="_blank">CoinDesk</a></p>
     </div>
 
 

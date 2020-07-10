@@ -42,33 +42,26 @@
               <h2>Why? 🤔</h2>
               <ul>
                 <li>I think we need to use the <span class="orange">easiest and best readable format</span> for Bitcoin transactions.</li>
-                <li>I want (new) people to realise that they can buy <span class="orange">a part of a bitcoin</span>.</li>
-                <li>I wanted to create an <span class="orange">easy tool</span> for people to check the price of Bitcoin in satoshi's.</li>
+                <li>I want (new) people to realise that you can buy <span class="orange">a part of a bitcoin</span>.</li>
+                <li>I wanted to create an <span class="orange">easy tool</span> for people to check the price of Bitcoin in sats.</li>
               </ul>
               </br>
               <h2>What? ℹ️</h2>
-              <p>I heard <a href="https://twitter.com/GKBoris" target="_blank">@GKBoris</a> speak about Lightning ⚡
+              <p>Back in the days I heard <a href="https://twitter.com/GKBoris" target="_blank">@GKBoris</a> speak about Lightning ⚡
                  in the Cryptocast (a Dutch podcast about crypto/Bitcoin).
                  He spoke about some experimenting he did with Lightning transactions and wallets.
-                 His point: Lightning is awesome and a few satoshi's feel like a fortune in a Lightning wallet.
+                 His point: Lightning is awesome and a few sats feel like a fortune in a Lightning wallet.
                </p>
 
               <p>
                 I tried it for myself and noticed that he was right.
                 A few satoshi's feeled like a fortune indeed.
-                Besides it is a lot easier to read the amount of satoshi's you’re sending or
-                 receiving using the satoshi's format instead of the weird 0.something format.
-                  For example: 1000 satoshi's is easier to read than 0.000001000 and 326,034 satoshi's is
-                  so much easier than 0.00326034.
+                Besides it is a lot easier to read the amount of sats you’re sending or
+                receiving using the satoshi format instead of the weird 0.something format.
+                For example: 1000 sats is easier to read than 0.000001000 and 326,034 sats is
+                so much easier than 0.00326034.
               </p>
               </br>
-
-              <h2>Want to help? 🦸</h2>
-              <p>
-              If you like this concept I would like you to tell your friends about it and <a class="nav-link my-link" href="https://twitter.com/intent/tweet?text=Did%20you%20know%20you%20can%20just%20buy%20a%20part%20of%20a%20bitcoin?%20This%20website%20shows%20fiat%20vs.%20Bitcoin%20in%20satoshi!%20https%3A%2F%2Fsatoshisprice.com" target="_blank">share it on Twitter.</a> And if you want to help maintain this website or just want to support me you can sent me a few satoshi using <a href="https://tippin.me/@brambakx" target="_blank">Tippin.me</a>. 😊
-              </p>
-              </br>
-
             </div>
           </div>
         </div>

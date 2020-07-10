@@ -3,14 +3,17 @@ html,body {
    padding:0;
    height:100%;
 }
+
 #container {
    min-height:100%;
    position:relative;
 }
+
 #header {
    background:#fefefe;
    padding:10px;
 }
+
 #body {
    padding:10px;
    padding-bottom: 60px;   /* Height of the footer */
