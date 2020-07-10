@@ -102,6 +102,11 @@
                 <p>Last updated: <?php echo $lastUpdated; ?></p> <!-- MMM DD, YYYY HH:MM:SS UTC -->
               </div>
             </div>
+            <div class="col-md-3 offset-md-4">
+              <div class="time-updated">
+                <p>Note that gold/silver markets have a premium when closed!</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
