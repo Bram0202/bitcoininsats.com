@@ -15,7 +15,7 @@
     </div>
 
     <div class="col-md-3 my-bg">
-      <p><a href="https://github.com/Bram0202/bitcoin-in-sats/blob/master/README.md" target="_blank">README</a></p>
+      <p><a href="https://github.com/Bram0202/bitcoininsats.com/blob/master/README.md" target="_blank">README</a></p>
     </div>
 
   </div>

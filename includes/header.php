@@ -28,7 +28,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link my-link" href="https://twitter.com/intent/tweet?text=Did%20you%20know%20you%20can%20just%20buy%20a%20part%20of%20a%20bitcoin?%20This%20website%20shows%20fiat%20vs.%20Bitcoin%20in%20satoshi!%20https%3A%2F%2Fsatoshisprice.com" target="_blank">Share on Twitter</a>
+            <a class="nav-link my-link" href="https://twitter.com/intent/tweet?text=A%20website%20with%20the%20bitcoin%20vs.%20fiat,%20gold%20and%20silver%20prices.%20In%20sats.%20https%3A%2F%2Fbitcoininsats.com" target="_blank">Share on Twitter</a>
           </li>
         </ul>
       </div>

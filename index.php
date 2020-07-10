@@ -19,7 +19,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="The best site for the bitcoin price vs. fiat, gold and silver. In sats." />
+    <meta name="twitter:description" content="A website with the bitcoin vs. fiat, gold and silver prices. In sats." />
     <meta name="twitter:title" content="Bitcoin in sats" />
     <meta name="twitter:creator" content="@bram21_" />
     <title>Bitcoin in sats</title>
