@@ -1,35 +1,31 @@
 <?php
-  //requires "functions.php";
+  function getPrice($ticker) {
+    $url = "https://api.coindesk.com/v1/bpi/currentprice/".$ticker.".json";
 
-
-  // https://api.coindesk.com/v1/bpi/currentprice/EUR.json
-
-  // Pakt de prijs uit de juiste JSON file van Coindesk.
-  function linkToJson($url, $cur) {
     $fgc = file_get_contents($url);
     $json = json_decode($fgc, true);
 
-    $price = $json["bpi"][$cur]["rate_float"];
+    $price = $json["bpi"][$ticker]["rate_float"];
     return $price;
   }
-  $btcPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/btc.json", "BTC");
-  $eurPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice.json", "EUR");
-  $usdPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice.json", "USD");
-  $gbpPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice.json", "GBP");
-  $jpyPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/jpy.json", "JPY");
-  $cnyPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/cny.json", "CNY");
-  $chfPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/chf.json", "CHF");
-  $audPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/aud.json", "AUD");
-  $rubPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/rub.json", "RUB");
-  $cadPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/cad.json", "CAD");
-  $dkkPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/dkk.json", "DKK");
-  $nokPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/nok.json", "NOK");
-  $sekPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/sek.json", "SEK");
-  $tryPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/try.json", "TRY");
-  $vefPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/vef.json", "VEF");
-  $irrPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/irr.json", "IRR");
-  $xauPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/xau.json", "XAU");
-  $xagPrice = linkToJson("https://api.coindesk.com/v1/bpi/currentprice/xag.json", "XAG");
+
+  /*
+  The math behind the convertion of the Coindesk data.
+  For example:
+  1 bitcoin = $3500
+  1 satoshi = (3500/100.000.000)
+  $1 = 1/000035
+  */
+  function priceInSatoshi($price) {
+    $tempPrice = $price / 100000000;
+    $priceInSats = 1 / $tempPrice;
+
+    if (round((double) $priceInSats) > 0) {
+      return round((double) $priceInSats);
+    } elseif (round((double) $priceInSats) <= 0) {
+      return round((double) $priceInSats, 4);
+    }
+  }
 
   // MM-DD, YYYY UU-MM-SS UTC
   $url = "https://api.coindesk.com/v1/bpi/currentprice.json";
