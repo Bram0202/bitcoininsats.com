@@ -1,5 +1,5 @@
 <?php
-  function getPrice($ticker) {
+  function getPriceFromApi($ticker) {
     $url = "https://api.coindesk.com/v1/bpi/currentprice/".$ticker.".json";
 
     $fgc = file_get_contents($url);
@@ -25,6 +25,24 @@
     } elseif (round((double) $priceInSats) <= 0) {
       return round((double) $priceInSats, 4);
     }
+
+    return $price;
+  }
+
+  function numberFormatter($number) {
+      if ($number < 1) {
+          return number_format($number, 4, ",", ".");
+      } else {
+          return number_format($number, 0, ",", ".");
+      }
+  }
+
+  function getPrice($ticker) {
+      $price = getPriceFromApi($ticker);
+      $price = priceInSatoshi($price);
+      $price = numberFormatter($price);
+      return $price;
+      // return numberFormatter(priceInSatoshi(getPrice($ticker)));
   }
 
   // MM-DD, YYYY UU-MM-SS UTC

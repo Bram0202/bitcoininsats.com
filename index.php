@@ -21,10 +21,6 @@
     <title>Satoshi's Price</title>
   </head>
   <body>
-    <?php
-      $xauPrice = getPrice("XAU");
-      $xagPrice = getPrice("XAG");
-    ?>
     <div id="container">
       <div id="header">
         <?php require "includes/header.php"; ?>
@@ -38,67 +34,65 @@
             <div class="col-md-3 offset-md-1 my-col">
 
               <h2>Bitcoin <img src="./images/bitcoin_logo.png" height="25px"></h2>
-              <p>₿1 = <?php echo priceInSatoshi(getPrice("BTC")); ?> sats</p>
+              <p>₿1 = <?php echo getPrice("BTC"); ?> sats</p>
 
               <h2>Euro 🇪🇺</h2>
-              <p>€1 = <?php echo priceInSatoshi(getPrice("EUR")); ?> sats</p>
+              <p>€1 = <?php echo getPrice("EUR"); ?> sats</p>
 
               <h2>U.S. Dollar 🇺🇸</h2>
-              <p>$1 = <?php echo priceInSatoshi(getPrice("USD")); ?> sats</p>
+              <p>$1 = <?php echo getPrice("USD"); ?> sats</p>
 
               <h2>British Pound 🇬🇧</h2>
-              <p>£1 = <?php echo priceInSatoshi(getPrice("GBP")); ?> sats</p>
+              <p>£1 = <?php echo getPrice("GBP"); ?> sats</p>
 
               <h2>Canadian Dollar 🇨🇦</h2>
-              <p>$1 = <?php echo priceInSatoshi(getPrice("CAD")); ?> sats</p>
+              <p>$1 = <?php echo getPrice("CAD"); ?> sats</p>
 
               <h2>Australian Dollar 🇦🇺</h2>
-              <p>$1 = <?php echo priceInSatoshi(getPrice("AUD")); ?> sats</p>
+              <p>$1 = <?php echo getPrice("AUD"); ?> sats</p>
             </div>
 
             <!-- Middelste colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
               <h2>Japanese Yen 🇯🇵</h2>
-              <p>¥1 = <?php echo priceInSatoshi(getPrice("JPY")); ?> sats</p>
+              <p>¥1 = <?php echo getPrice("JPY"); ?> sats</p>
 
               <h2>Chinese Yuan 🇨🇳</h2>
-              <p>¥1 = <?php echo priceInSatoshi(getPrice("CNY")); ?> sats</p>
+              <p>¥1 = <?php echo getPrice("CNY"); ?> sats</p>
 
               <h2>Swiss Franc 🇨🇭</h2>
-              <p>₣1 = <?php echo priceInSatoshi(getPrice("CHF")); ?> sats</p>
+              <p>₣1 = <?php echo getPrice("CHF"); ?> sats</p>
 
               <h2>Danish Krone 🇩🇰</h2>
-              <p>kr1 = <?php echo priceInSatoshi(getPrice("DKK")); ?> sats</p>
+              <p>kr1 = <?php echo getPrice("DKK"); ?> sats</p>
 
               <h2>Norwegian Krone 🇳🇴</h2>
-              <p>kr1 = <?php echo priceInSatoshi(getPrice("NOK")); ?> sats</p>
+              <p>kr1 = <?php echo getPrice("NOK"); ?> sats</p>
 
               <h2>Swedish Krona 🇸🇪</h2>
-              <p>kr1 = <?php echo priceInSatoshi(getPrice("SEK")); ?> sats</p>
+              <p>kr1 = <?php echo getPrice("SEK"); ?> sats</p>
             </div>
 
             <!-- Rechter colomn met content. -->
             <div class="col-md-3 offset-md-1 my-col">
 
               <h2>Russian Ruble 🇷🇺</h2>
-              <p>₽1 = <?php echo priceInSatoshi(getPrice("RUB")); ?> sats</p>
+              <p>₽1 = <?php echo getPrice("RUB"); ?> sats</p>
 
               <h2>Turkish Lira 🇹🇷</h2>
-              <p>₺1 = <?php echo priceInSatoshi(getPrice("TRY")); ?> sats</p>
+              <p>₺1 = <?php echo getPrice("TRY"); ?> sats</p>
 
               <h2>Iranian Rial 🇮🇷</h2>
-              <p> <?php echo priceInSatoshi(getPrice("IRR")); ?> sats = ﷼1</p>
+              <p> <?php echo getPrice("IRR"); ?> sats = ﷼1</p>
 
               <h2>Venezuelan Bolívar 🇻🇪</h2>
-              <p>Bs1 = <?php echo priceInSatoshi(getPrice("VEF")); ?> sats</p>
+              <p>Bs1 = <?php echo getPrice("VEF"); ?> sats</p>
 
               <h2>Gold (XAU) ⛏️</h2>
-              <p>1 t/oz = <?php echo priceInSatoshi(getPrice("XAU")); ?> sats</p>
-              <p> <?php echo $xauPrice; ?> </p>
+              <p>1 t/oz = <?php echo getPrice("XAU"); ?> sats</p>
 
               <h2>Silver (XAG) ⛏️</h2>
-              <p>1 t/oz = <?php echo priceInSatoshi(getPrice("USD")); ?> sats</p>
-              <p> <?php echo $xagPrice; ?> </p>
+              <p>1 t/oz = <?php echo getPrice("XAG"); ?> sats</p>
             </div>
           </div>
 
